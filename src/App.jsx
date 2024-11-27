@@ -5,9 +5,13 @@ function App() {
   
   return (
     <>
-      <h1>Learn about redux toolkit</h1>
+    <div className=' px-20 mx-auto '>
+
       <AddTodo />
       <Todos />
+
+    </div>
+      
     </>
   )
 }
