@@ -5,7 +5,7 @@ const initialState = {
     TodosArray: [
         {
             id: 1,
-            text: "Hello"
+            text: "Go to Gym"
         }
     ]
 }
@@ -41,7 +41,11 @@ export const todoSlice = createSlice({
         updateTodo: (state, action) => {
 
             // Get the current state of todo list 
-            state.TodosArray = state.TodosArray.map((prevTodo) => eachTodo.id ? action.payload.text : prevTodo)
+            state.TodosArray = state.TodosArray.map((prevTodo) => prevTodo.id === action.payload.id 
+        
+            ?   {...prevTodo, text: action.payload.text }
+            : prevTodo
+        )
         },
 
         // Delete Todo

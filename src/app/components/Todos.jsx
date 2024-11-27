@@ -20,7 +20,7 @@ function Todos() {
 
             {/* Edit Button */}
             {/* <button
-             onClick={() => dispatch(updateTodo(todo.id))}
+             onClick={() => dispatch(updateTodo({id: todo.id, text: todo.text}))}
               className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
             >
               <svg
